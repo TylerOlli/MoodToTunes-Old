@@ -1,12 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import App from './App';
-
-const title = 'React with Webpack and Babel!';
+const tracks = [
+  {
+    title: 'Some track'
+  },
+  {
+    title: 'Some other track'
+  }
+];
 
 ReactDOM.render(
-  <App title={title} />,
+  <div>
+    {
+      tracks.map((track, key) => {
+        return <div className="track" key={key}>{track.title}</div>;
+      })
+    }
+  </div>,
   document.getElementById('app')
 );
 
