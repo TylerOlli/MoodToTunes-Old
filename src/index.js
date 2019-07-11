@@ -12,8 +12,8 @@ const tracks = [
 ];
 
 ReactDOM.render(
-	<Stream tracks={tracks} />,
-	document.getElementByID('app')
+  <Stream tracks={tracks} />,
+  document.getElementById('app')
 );
 
 module.hot.accept();
